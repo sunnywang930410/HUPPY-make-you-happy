@@ -1,0 +1,126 @@
+/* about */
+.about {
+    margin-top: 10%;
+}
+
+.about_left {
+    padding-top: 0%;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.about_left.fade-in {
+    opacity: 1;
+}
+
+
+.purpose_text {
+    padding-bottom: 2%;
+    width: 100%;
+}
+
+.purpose_title {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Kalam;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.purpose_words {
+    color: #2C4358;
+    font-family: Kalam;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.abandonment_container {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.abandonment_img {
+    width: 100%;
+}
+
+.abandonment_text {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Kalam;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.seemore {
+    position: relative;
+    width: 150px;
+    justify-content: end;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.about_right {
+    padding-top: 3%;
+    /* padding-left: 3%; */
+    padding-right: 3%;
+    width: 20%;
+}
+
+.member1 {
+    position: relative;
+    top: 70%;
+    width: 250px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: #EBE9B7;
+    box-shadow: -10px 10px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.member2 {
+    position: relative;
+    top: 50%;
+    margin-top: 2%;
+    width: 250px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: #FFC8A9;
+    box-shadow: -10px 10px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked+label:before {
+    content: "\2713";
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
