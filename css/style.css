@@ -89,22 +89,84 @@
     display: flex;
 }
 
+.collapse {
+    position: fixed!important;
+    top: 0%;
+    background-color:#5880A4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 900;
+}
+
+.nav-link{
+    font-size: 20px;
+    color: #FFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-link:hover{
+    cursor: url("../img/pointer02.ico"), pointer;
+    color:#EBE9B7;
+}
+
+.navbar-toggler-column{
+    flex-direction: column!important;
+}
+
+.navbar-toggler {
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    width: 35px;
+    height: 30px;
+    z-index: 999;
+}
+.navbar-dark{
+    background-color: #517ba1!important;
+}
+.navbar-dark:hover{
+    background-color: #EBE9B7!important;
+    cursor: url("../img/pointer02.ico"), pointer!important;
+}
+
+.navbar-toggler-icon {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 35px;
+    height: 30px;
+}
+
 .background {
     background-color: #ffffff57;
     border-radius: 6px;
-
 }
 
 .navbar-nav {
     display: flex;
     padding-left: 0px;
     display: block;
+    
+}
+
+.navbar-row{
+    flex-direction: row !important;
 }
 
 .nav_list {
+    display: none;
     list-style: none;
     padding-right: 2%;
     white-space: nowrap;
+}
+
+.bone {
+    display: none;
 }
 
 .list_link {
@@ -112,11 +174,12 @@
     text-decoration: none;
     color: #203446;
     font-family: Kalam;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     cursor: url("../img/pointer02.ico"), pointer;
+    width: fit-content;
 }
 
 /* nav */
@@ -127,9 +190,10 @@
 }
 
 .whitebone_box {
-    display: flex;
-    margin-top: 2%;
-    margin-left: 95.5%;
+    display: none;
+    position: relative;
+    right: 5%;
+    top: 5%;
 }
 
 .whitebone {
@@ -335,7 +399,7 @@
 
 /* check */
 #check_mindset_container {
-    max-width: 1250px;
+    max-width: 900px;
 }
 
 .check {
@@ -939,7 +1003,8 @@
 .menu_words:hover {
     text-decoration: none;
     transform: scale(1.1);
-    color: #5880A4
+    color: #5880A4;
+    cursor: url("../img/pointer02.ico"), pointer;
 }
 
 a:hover {
@@ -1192,7 +1257,9 @@ a:hover {
 .adopt_top {
     display: flex;
 }
-
+.adopt_element_outside{
+    order:-1;
+}
 .adopt_bottom {
     display: flex;
 }
@@ -1528,6 +1595,22 @@ a:hover {
         text-decoration: none;
     }
 
+    .navbar-toggler {
+        position: fixed;
+        right: 3%;
+        top: 3%;
+        width: 35px;
+        height: 30px;
+    }
+
+    .navbar-toggler-icon {
+        position: absolute;
+        right: 3%;
+        top: 2%;
+        width: 35px;
+        height: 30px;
+    }
+
     .paw {
         width: 25px;
         height: 25px;
@@ -1551,6 +1634,15 @@ a:hover {
         font-size: 18px;
     }
 
+    .nav_list {
+        display: none;
+        list-style: none;
+        padding-right: 30px;
+        white-space: nowrap;
+    }
+    .bone{
+        display: none;
+    }
     #about_container {
         max-width: 1400px;
     }
@@ -1847,6 +1939,7 @@ a:hover {
         display: flex;
         /* 固定字，以免換行 */
     }
+
     .navbar {
         margin-top: 1.5%;
         padding-top: 0px;
@@ -1854,60 +1947,70 @@ a:hover {
         margin-left: 3%;
         display: flex;
     }
-    
+
     .background {
         background-color: #ffffff57;
         border-radius: 6px;
-    
+
     }
-    
+
     .navbar-nav {
         display: flex;
         padding-left: 0px;
         display: block;
+        flex-direction: row;
     }
-    
+
+    .navbar-toggler {
+        display: none;
+    }
+
     .nav_list {
+        display: flex;
         list-style: none;
-        padding-right: 15px;
+        padding-right: 30px;
         white-space: nowrap;
     }
-    
+
     .list_link {
         display: block;
         text-decoration: none;
         color: #203446;
         font-family: Kalam;
-        font-size: 24px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         cursor: url("../img/pointer02.ico"), pointer;
+        width: fit-content;
     }
-    
+
     /* nav */
     .list_link:hover {
         text-decoration: none;
         color: #FDE878;
         transform: scale(1.2) !important;
     }
-    
+
     .whitebone_box {
         display: flex;
         margin-top: 2%;
-        margin-left: 95.5%;
+        margin-left: 95%;
     }
-    
+
     .whitebone {
         width: 40px;
         opacity: 0%;
         filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
         cursor: url("../img/pointer02.ico"), pointer;
     }
-    
+    .bone{
+        display: block;
+    }
     #collector {
         margin-right: 0px;
     }
+
     .paw {
         width: 20px;
         height: 20px;
@@ -2348,7 +2451,9 @@ a:hover {
     .adopt_bottom {
         display: flex;
     }
-
+    .adopt_element_outside{
+        order:0;
+    }
     #row_adopt {
         padding-bottom: 2%;
     }
@@ -2452,6 +2557,7 @@ a:hover {
     #order_1 {
         order: 0;
     }
+
     #topic_title {
         font-size: 30px;
     }
@@ -2511,6 +2617,7 @@ a:hover {
         display: flex;
         /* 固定字，以免換行 */
     }
+
     .navbar {
         margin-top: 1.5%;
         padding-top: 0px;
@@ -2518,25 +2625,27 @@ a:hover {
         margin-left: 3%;
         display: flex;
     }
-    
+
     .background {
         background-color: #ffffff57;
         border-radius: 6px;
-    
+
     }
-    
+
     .navbar-nav {
         display: flex;
         padding-left: 0px;
         display: block;
+        flex-direction: row;
     }
-    
+
     .nav_list {
+        display: flex;
         list-style: none;
         padding-right: 30px;
         white-space: nowrap;
     }
-    
+
     .list_link {
         display: block;
         text-decoration: none;
@@ -2548,30 +2657,32 @@ a:hover {
         line-height: normal;
         cursor: url("../img/pointer02.ico"), pointer;
     }
-    
+
     /* nav */
     .list_link:hover {
         text-decoration: none;
         color: #FDE878;
         transform: scale(1.2) !important;
     }
-    
+
     .whitebone_box {
         display: flex;
         margin-top: 2%;
         margin-left: 95.5%;
     }
-    
+
     .whitebone {
+        display: block;
         width: 40px;
         opacity: 0%;
         filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.25));
         cursor: url("../img/pointer02.ico"), pointer;
     }
-    
+
     #collector {
         margin-right: 0px;
     }
+
     .paw {
         width: 20px;
         height: 20px;
@@ -2606,6 +2717,14 @@ a:hover {
         font-weight: 400;
         line-height: normal;
         letter-spacing: 10px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .bone {
+        display: block;
     }
 
     .about_left {
@@ -2691,7 +2810,7 @@ a:hover {
     }
 
     #check_mindset_container {
-        max-width: 1250px;
+        max-width: 1150px;
     }
 
     .learn_right {
@@ -2993,7 +3112,12 @@ a:hover {
         width: 100%;
         height: 100%;
     }
-
+    #container {
+        max-width: 1400px;
+    }
+    #dog_collector_col{
+        padding: 0 5%;
+    }
     .hide {
         display: none;
     }
@@ -3190,7 +3314,9 @@ a:hover {
     .adopt_top {
         display: flex;
     }
-
+    .adopt_element_outside{
+        order:0;
+    }
     .adopt_bottom {
         display: flex;
     }
